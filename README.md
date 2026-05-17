@@ -1,4 +1,4 @@
-# Minigram
+MINIGRAM
 
 Minigram es una aplicación web tipo red social simple que estoy desarrollando como proyecto personal para practicar backend, frontend, bases de datos y servicios cloud en AWS.
 
@@ -122,21 +122,21 @@ SEGURIDAD:
 
 En el proyecto estoy aplicando algunas prácticas básicas de seguridad:
 
-- las contraseñas no se guardan en texto plano;
-- bcrypt se usa para proteger las contraseñas;
-- JWT se usa para manejar autenticación;
-- algunas rutas están protegidas con middleware;
-- las credenciales se manejan con variables de entorno;
-- el archivo `.env` real no se sube al repositorio;
-- CloudFront permite usar HTTPS para acceder a la aplicación.
+- las contraseñas no se guardan en texto plano
+- bcrypt se usa para proteger las contraseñas
+- JWT se usa para manejar autenticación
+- algunas rutas están protegidas con middleware
+- las credenciales se manejan con variables de entorno
+- el archivo `.env` real no se sube al repositorio
+- CloudFront permite usar HTTPS para acceder a la aplicación
 
 VARIABLES DE ENTORNO:
 
-El proyecto necesita un archivo `.env` basado en `.env.example`.
+El proyecto necesita un archivo .env basado en .env.example
 
 Ejemplo:
 
-    DB_HOST=
+    db_HOST=
     DB_USER=
     DB_PASSWORD=
     DB_NAME=
@@ -149,14 +149,14 @@ Ejemplo:
 
     JWT_SECRET=
 
-El archivo `.env` real contiene datos sensibles y no debe subirse a GitHub.
 
 INSTALACIÓN LOCAL:
 
 Clonar el repositorio:
 
-    git clone URL_DEL_REPOSITORIO
-    cd NOMBRE_DEL_PROYECTO
+    git clone https://github.com/tobias-machelett/minigram.git
+
+    cd minigram
 
 Instalar dependencias:
 
@@ -182,21 +182,20 @@ PRÓXIMAS MEJORAS:
 
 Algunas mejoras que quiero agregar:
 
-- hacer que solo el dueño de un post pueda eliminarlo;
-- asociar comentarios a usuarios reales;
-- mejorar el sistema de likes para evitar votos repetidos;
-- validar mejor el tamaño y formato de las imágenes;
-- mejorar mensajes de error en el frontend;
-- mejorar el diseño responsive;
-- agregar Docker;
-- agregar dominio propio;
-- agregar tests básicos;
+- hacer que solo el dueño de un post pueda eliminarlo.
+- asociar comentarios a usuarios reales,
+- mejorar el sistema de likes para evitar votos repetidos.
+- validar mejor el tamaño y formato de las imágenes.
+- mejorar mensajes de error en el frontend.
+- mejorar el diseño responsive.
+- agregar Docker
+- agregar dominio propio.
+- agregar tests básicos.
 - documentar mejor la arquitectura.
 
-QUÉ APRENDÍ:
+QUE APRENDÍ:
 
 Con este proyecto practiqué separar frontend, backend, base de datos y almacenamiento, desplegar una app real en AWS, usar S3 para archivos e imágenes, usar RDS PostgreSQL, correr un backend en EC2, usar CloudFront para HTTPS, manejar autenticación con JWT, proteger rutas con middleware, trabajar con variables de entorno y debuggear errores reales de backend, CORS, CloudFront y despliegue.
 
 AUTOR:
-
-Proyecto desarrollado por Tobias Machelett como parte de mi formación en backend, cloud computing y arquitectura AWS.
+ Tobias Valentin  Machelett Sanhuesa
