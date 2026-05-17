@@ -1,0 +1,12 @@
+node_modules/
+.env
+uploads/
+test.jpg
+
+.DS_Store
+
+server.backup.js
+server.js.save
+server.js.save.1
+
+npm-debug.log*
