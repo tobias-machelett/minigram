@@ -158,11 +158,14 @@ Clonar el repositorio:
 
     cd minigram
 
+    npm install
+
+    
 Instalar dependencias:
 
     npm install
 
-Crear un archivo `.env` usando como guía `.env.example`.
+Crear un archivo .env usando como guía .env.example
 
 Ejecutar el servidor:
 
