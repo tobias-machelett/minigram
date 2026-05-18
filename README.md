@@ -5,6 +5,7 @@ Minigram es una aplicación web tipo red social simple que estoy desarrollando c
 La idea es construir una app donde un usuario pueda registrarse, iniciar sesión, subir imágenes, ver publicaciones, comentar y dar likes/dislikes. Todavía está en desarrollo, pero ya tiene una base funcional desplegada en AWS.
 
 Demo: https://dkk95jncs305s.cloudfront.net
+Nota: la demo puede estar pausada temporalmente para evitar costos de AWS.
 
 OBJETIVO DEL PROYECTO: El objetivo principal es practicar una arquitectura más cercana a un proyecto real, separando frontend, backend, base de datos y almacenamiento de archivos.
 
