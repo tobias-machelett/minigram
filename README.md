@@ -10,14 +10,14 @@ OBJETIVO DEL PROYECTO: El objetivo principal es practicar una arquitectura más 
 
 Con este proyecto estoy trabajando:
 
-- backend con Node.js y Express;
-- base de datos PostgreSQL en RDS;
-- almacenamiento de imágenes en S3;
-- frontend estático;
-- autenticación con JWT;
-- contraseñas protegidas con bcrypt;
-- despliegue en EC2;
-- CloudFront para exponer la app con HTTPS;
+- backend con Node.js y Express
+- base de datos PostgreSQL en RDS
+- almacenamiento de imágenes en S3
+- frontend estático
+- autenticación con JWT
+- contraseñas protegidas con bcrypt
+- despliegue en EC2
+- CloudFront para exponer la app con HTTPS
 - organización del código en rutas, controladores, configuración y middleware.
 
 ARQUITECTURA GENERAL:
