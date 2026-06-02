@@ -21,7 +21,7 @@ router.get("/", authMiddleware, getPosts);
 
 router.post("/upload", authMiddleware, upload.single("image"), uploadPost);
 
-router.delete("/:id", deletePost);
+router.delete("/:id", authMiddleware, deletePost);
 
 router.post("/:id/like", likePost);
 

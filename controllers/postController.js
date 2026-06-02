@@ -72,7 +72,7 @@ const deletePost = async (req, res) => {
 
   try {
     const result = await pool.query(
-      "SELECT image_url FROM posts WHERE id = $1",
+      "SELECT image_url, user_id FROM posts WHERE id = $1",
       [postId]
     );
 
@@ -81,6 +81,11 @@ const deletePost = async (req, res) => {
     }
 
     const imageUrl = result.rows[0].image_url;
+    const userId = result.rows[0].user_id;
+
+    if (userId !== req.user.id) {
+      return res.status(403).send("No tenés permiso para eliminar este post");
+    }
 
     if (imageUrl.includes(".amazonaws.com/")) {
       const fileKey = decodeURIComponent(imageUrl.split(".amazonaws.com/")[1]);
@@ -101,6 +106,7 @@ const deletePost = async (req, res) => {
     res.status(500).send("Error eliminando post");
   }
 };
+
 
 const likePost = async (req, res) => {
   const postId = req.params.id;
