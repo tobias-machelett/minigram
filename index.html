@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Minigram</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Minigram</h1>
+      <p>Proyecto cloud con EC2, RDS, S3, CloudFront y JWT</p>
+    </header>
+
+    <section class="auth-card" id="authSection">
+      <div id="loggedOutBox">
+        <h2>Ingresar</h2>
+
+        <input id="loginEmail" type="email" placeholder="Email" />
+        <input id="loginPassword" type="password" placeholder="Contraseña" />
+
+        <button class="primary-button" onclick="login()">Iniciar sesión</button>
+
+        <hr />
+
+        <h2>Crear cuenta</h2>
+
+        <input id="registerUsername" type="text" placeholder="Usuario" />
+        <input id="registerEmail" type="email" placeholder="Email" />
+        <input id="registerPassword" type="password" placeholder="Contraseña" />
+
+        <button class="secondary-button" onclick="register()">Registrarme</button>
+      </div>
+
+      <div id="loggedInBox" class="hidden">
+        <p>
+          Sesión iniciada como:
+          <strong id="currentUserName"></strong>
+        </p>
+
+        <button class="logout-button" onclick="logout()">Cerrar sesión</button>
+      </div>
+    </section>
+
+    <div id="appContent" class="hidden">
+      <section class="upload-card">
+        <h2>Subir imagen</h2>
+
+        <input
+          type="file"
+          id="fileInput"
+          accept="image/*"
+          capture="environment"
+        />
+
+        <div id="preview"></div>
+
+        <button class="primary-button" onclick="upload()">Subir imagen</button>
+      </section>
+
+      <section class="feed-card">
+        <div class="feed-header">
+          <h2>Feed</h2>
+          <span id="postCount"></span>
+        </div>
+
+        <div id="posts" class="posts-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="ghostSuccess" class="ghost-success hidden">
+    <div class="ghost-overlay"></div>
+
+    <div class="ghost-scene">
+      <div class="ghost-bubble">
+        Felicitaciones, tu foto se ha subido correctamente
+      </div>
+
+      <div class="ghost-character">
+        <div class="impact impact-one"></div>
+        <div class="impact impact-two"></div>
+        <div class="impact impact-three"></div>
+
+        <div class="ghost-glove ghost-glove-left"></div>
+        <div class="ghost-glove ghost-glove-right"></div>
+
+        <div class="ghost-body">
+          <div class="ghost-eye ghost-eye-left"></div>
+          <div class="ghost-eye ghost-eye-right"></div>
+          <div class="ghost-mouth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app-v3.js"></script>
+</body>
+</html>
